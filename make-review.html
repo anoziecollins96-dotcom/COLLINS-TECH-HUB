@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make a Review - Tech Review Hub</title>
+    <link rel="stylesheet" href="dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="dist/css/index.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-md fixed-top shadow-sm" style="background-color: skyblue;">
+        <div class="container">
+            <a href="index.html" class="navbar-brand fs-2 fw-bold text-darkblue">collins Tech Hub</a>
+            <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#mybar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="mybar">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="index.html" class="nav-link" style="color: rgb(60, 86, 96);">View Reviews</a></li>
+                    <li class="nav-item"><a href="make-review.html" class="nav-link text-darkblue fw-bold">Make a Review</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="categories.html" class="nav-link dropdown-toggle" style="color: rgb(60, 86, 96);" data-bs-auto-close="outside" data-bs-toggle="dropdown">Categories</a>
+                        <ul class="dropdown-menu border-0 shadow-sm">
+                            <li><a href="categories.html" class="dropdown-item">Phone</a></li>
+                            <li><a href="Laptop.html" class="dropdown-item">Laptop</a></li>
+                            <li><a href="Smart Electronics.html" class="dropdown-item">Smart Electronics</a></li>
+                            <li><a href="Smart Accessories.html" class="dropdown-item">Smart Accessories</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="blog.html" class="nav-link" style="color: rgb(60, 86, 96);">Blog</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mb-5 d-flex justify-content-center">
+        <div class="card border-0 shadow-sm rounded-4 w-100" style="max-width: 600px;">
+            <div class="card-body p-4 p-md-5">
+                <div class="text-center mb-4">
+                    <h3 class="fw-bold text-darkblue">Write a Review</h3>
+                    <p class="text-secondary small">Share your experience with our tech products.</p>
+                </div>
+
+                <form>
+                    <div class="row g-3 mb-3">
+                        <div class="col-md-6">
+                            <label for="fullName" class="form-label small fw-bold text-darkblue">Full Name</label>
+                            <input type="text" class="form-control rounded-3" id="fullName" placeholder="John Doe" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="emailAddr" class="form-label small fw-bold text-darkblue">Email Address</label>
+                            <input type="email" class="form-control rounded-3" id="emailAddr" placeholder="name@example.com" required>
+                        </div>
+                    </div>
+
+                    <div class="row g-3 mb-3">
+                        <div class="col-md-6">
+                            <label for="category" class="form-label small fw-bold text-darkblue">Product Category</label>
+                            <select id="category" class="form-select rounded-3" required>
+                                <option value="" selected disabled>Select Category...</option>
+                                <option value="phone">Phone</option>
+                                <option value="laptop">Laptop</option>
+                                <option value="smart-electronics">Smart Electronics</option>
+                                <option value="smart-accessories">Smart Accessories</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="rating" class="form-label small fw-bold text-darkblue">Rating</label>
+                            <select id="rating" class="form-select rounded-3" required>
+                                <option value="" selected disabled class="text-dark">Select Rating...</option>
+                                <option class="text-warning" value="5">&#9733; &#9733; &#9733; &#9733; &#9733; (5 Stars)</option>
+                                <option class="text-warning" value="4">&#9733; &#9733; &#9733; &#9733; &#9734; (4 Stars)</option>
+                                <option class="text-warning" value="3">&#9733; &#9733; &#9733; &#9734; &#9734; (3 Stars)</option>
+                                <option class="text-warning" value="2">&#9733; &#9733; &#9734; &#9734; &#9734; (2 Stars)</option>
+                                <option class="text-warning" value="1">&#9733; &#9734; &#9734; &#9734; &#9734; (1 Star)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="mt-4 mb-4">
+                        <label for="upload" class="form-label small fw-bold text-darkblue">Upload File</label>
+                        <input type="file" name="" id="">
+                    </div>
+                    <div class="mb-4">
+                        <label for="reviewText" class="form-label small fw-bold text-darkblue">Your Review</label>
+                        <textarea class="form-control rounded-3" id="reviewText" rows="5" placeholder="Tell us what you loved or didn't perform well..." required></textarea>
+                    </div>
+
+                    <div class="d-grid">
+                        <button type="submit" class="btn bg-darkblue text-white rounded-pill py-2 fw-bold shadow-sm">Submit Review</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
